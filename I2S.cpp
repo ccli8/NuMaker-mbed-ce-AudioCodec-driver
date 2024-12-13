@@ -32,6 +32,8 @@ extern "C" void I2S_IRQHandler(void)
 }
 #endif
 
+namespace mbed_nuvoton {
+
 static void donothing() {}
 
 #if defined(TARGET_NUMAKER_PFM_NANO130)
@@ -960,3 +962,5 @@ void NuI2SDevice::loopback(void) {
     I2S_ENABLE_TX(_i2s_base);
 #endif
 }
+
+}   /* namespace mbed_nuvoton */

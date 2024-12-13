@@ -21,6 +21,8 @@
 
 struct nu_modinit_s;
 
+namespace mbed_nuvoton {
+
 class NuI2SDevice
 {
     public:
@@ -63,5 +65,7 @@ class NuI2SDevice
         #endif
         
 };
+
+}   /* namespace nu_mpu6500 */
 
 #endif /*__MBED_I2S_H__*/

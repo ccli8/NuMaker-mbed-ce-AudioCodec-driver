@@ -18,6 +18,8 @@
 
 #include "NAU8822L.h"
 
+namespace mbed_nuvoton {
+
 NAU8822L::NAU8822L(PinName i2c_sda, PinName i2c_scl, int i2c_addr, PinName i2s_do, PinName i2s_di, PinName i2s_bclk, PinName i2s_mclk, PinName i2s_lrck)
                          : m_addr(i2c_addr), m_I2C(i2c_sda, i2c_scl), m_I2S(i2s_do, i2s_di, i2s_bclk, i2s_mclk, i2s_lrck) {
     m_I2C.frequency(100000);
@@ -291,3 +293,5 @@ void NAU8822L::loopback(void) {
 void NAU8822L::readwrite(void) {
     m_I2S.readwrite();
 }
+
+}   /* namespace mbed_nuvoton */

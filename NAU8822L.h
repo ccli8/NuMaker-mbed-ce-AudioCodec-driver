@@ -21,6 +21,8 @@
 
 #include "I2S.h"
 
+namespace mbed_nuvoton {
+
 class NAU8822L
 {        
     public:
@@ -52,5 +54,7 @@ class NAU8822L
         void I2C_WriteNAU8822(uint8_t u8addr, uint16_t u16data);
         
 };
+
+}   /* namespace mbed_nuvoton */
 
 #endif
